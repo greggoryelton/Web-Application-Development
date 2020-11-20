@@ -1,0 +1,28 @@
+Here are some of my implemenations for what my REST api will become and how it will handle different types of requests:
+
+User page:
+
+    GET - /users&name="string" - parse url and return users with that name.
+    GET - /users&username="string" parse url and return users with that USERname. 
+    GET - /users/:user_id - parse url and return user with that specific id. 
+
+Movie Page:
+
+    GET - /movies - Returns array of movies
+    GET - /movies&title="string" - parsing the URL using the "&" as a delimiter to seach DB and return movie
+    GET - /movies&genre="string" - parsing url to seach DB for movies with genre.
+    GET - /movies&year=int - parsing url to search DB for movies with the year specified. 
+    GET - /movies&minrating=int - parsing url to search for movies with a min rating specified and return that collection of movies. 
+
+    GET - /movies/:movie_id - Get a specific movie's info page 
+
+    POST - /movies/:movie_id - Add new movie and create specific info page.
+
+
+Cast Page:
+    GET - /people&name="string" - parse url and find the cast members page with the specified name. 
+    GET - /people/:person_id - get the specific page of the cast member. 
+    
+
+
+

@@ -1,0 +1,129 @@
+<html>
+   <head></head>
+   <title>TMS: Profile</title>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   <link href="stylesheet.css" rel="stylesheet">
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="scripts.js" rel="script"></script>
+
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">TMS</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+               <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="movieView.html">Movies</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="userView.html">Account</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="login.html">Login</a>
+            </li>
+         </ul>
+         <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" onclick="alertUser()" type="submit">Search</button>
+         </form>
+      </div>
+   </nav>
+   <body>
+      <div class="jumbotron jumbotron-fluid" style="margin-bottom: 0px;">
+         <div class="container-fluid">
+            <div class="mx-auto" style="width: 400px;">
+               <h1 class="display-4" style="text-align: center;">Account</h1>
+            </div>
+         </div>
+      </div>
+      <br>
+      <div class="container-fluid"style="margin-left: 5%">
+         <div class="row" >
+            <div class= "movie-portal-view">
+               <div class="container-fluid">
+                  <img src="https://st.depositphotos.com/2413271/5050/i/450/depositphotos_50503825-stock-photo-handsome-man-taking-selfie.jpg"class="img-fluid">
+               </div>
+            </div>
+            <div class="container" style ="margin: unset;">  
+                  <p-info>Username:</p-info>
+                  <p-info class = "username">t_user123</p-info>
+                  <br>
+                  <br>
+                  <p-info>Age:</p-info>
+                  <p-info class="age">22</p-info>
+                  <br>
+                  <br>
+                  <p-info>Location:</p-info>
+                  <p-info class="location">Canada</p-info>
+                  <br>
+                  <br>
+                  <p-info>Favourite Genres:</p-info>
+                  <p-info class="genre">Spy, Comedy, Thriller</p-info>
+                  <br>
+                  <br>
+                  <p-info>Last Online:</p-info>
+                  <p-info class="last-online">14 hours ago</p-info>
+                  <br>
+                  <br>
+                  <p-info>Posts:</p-info>
+                  <p-info class="posts">1337</p-info>
+                  <br>
+                  <br>
+                  <button class ="button_notFollowed" id="notFollowed" onclick=follow() value="Follow">Follow</button>
+               </div>
+               <div class="col">
+                <div class="card text-white bg-light mb-3" style="max-width: 18rem; margin-left:-50%;">
+                    <div style="color: grey" class="card-header">t_user123</div>
+                    <div class="card-body">
+                      <p style="color: grey" class="card-text">"Lover of all movies!"</p>
+                      <br>
+                    </div>
+                  </div>
+               </div>
+               <div class="container" style="margin:10px;">
+                  <p class="p-heading">Favourite Movies: </p>
+                  <div class="row">
+                    <div class="col-lg-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BZTk2ZmUwYmEtNTcwZS00YmMyLWFkYjMtNTRmZDA3YWExMjc2XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" width="250" height="310"class="img"style="margin-left:auto;margin-right:auto;">
+                        <p class="feature-1" style="font-family:Lucida Sans Unicode;font-size:20px;text-align:center;">Jumanji</p>
+                     </div>
+                     <div class="col-lg-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_SX300.jpg" width="250" height="310"class="img"style="margin-left:auto;margin-right:auto;">
+                        <p  class="feature-2" style="font-family:Lucida Sans Unicode;font-size:20px;text-align:center;">Toy Story</p>
+                     </div>
+                     <div class="col-lg-3">
+                        <a href="movieView.html"><img src="https://m.media-amazon.com/images/M/MV5BMzk2OTg4MTk1NF5BMl5BanBnXkFtZTcwNjExNTgzNA@@._V1_SX300.jpg" width="250" height="310"class="img"style="margin-left:auto;margin-right:auto;"></a>
+                        <p  class="feature-5" style="font-family:Lucida Sans Unicode;font-size:20px;text-align:center;">Goldeneye</p>
+                     </div>
+                  </div>
+               </div>
+               <div class ="container" style="margin:10px">
+                <p class ="p-heading">Followers:</p>
+                <div>
+                    <div clas ="row">
+                        <div class="col-lg-3">
+                            <img src="https://images.pexels.com/photos/2406949/pexels-photo-2406949.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="250" height="310"class="img-fluid"style="margin-left:auto;margin-right:auto;">
+                            <p class="followers-1" style="font-family:Lucida Sans Unicode;font-size:20px;text-align:center;">Bob_123</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <br>
+               </div>
+            </div>   
+         </div>
+         <script>
+            function alertUser(){
+               alert("Oops! This feature isn't available yet.")
+            }
+         </script>
+   </body>
+</html>
+
