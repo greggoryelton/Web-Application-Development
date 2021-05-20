@@ -83,7 +83,7 @@ function get_username_page(req,res){
 }
 
 
-/*
+
 function login(req,res,next){
 
     res.render("login", {});
@@ -119,7 +119,7 @@ function login(req,res,next){
     
  
  }
-*/
+
  function createAccount(req,res,next){
     var user = req.body.User;
     var pass = req.body.Pass;
