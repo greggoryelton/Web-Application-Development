@@ -1,0 +1,110 @@
+head
+title=' TMS: ' + mov.Title
+meta(content="text/html; charset=utf-8")
+link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' integrity='sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z' crossorigin='anonymous')
+link(href='stylesheet.css' rel='stylesheet')
+script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js' integrity='sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+script(src='scripts.js' rel='script')
+script(src='addreview.js' rel='script')
+- var n1 = Math.floor(Math.random()* similar.length);
+- var n2 = Math.floor(Math.random()* similar.length);
+- var n3 = Math.floor(Math.random()* similar.length);
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  a.navbar-brand(href='/') TMS
+  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      li.nav-item
+        a.nav-link(href='/') Home
+      li.nav-item.active
+        a.nav-link(href='/movies')
+          | Movies
+          span.sr-only
+      li.nav-item
+        a.nav-link(href='/users')
+          | Account
+      li.nav-item
+        a.nav-link(href='/login') Login
+    form.form-inline.my-2.my-lg-0
+      input.form-control.mr-sm-2(type='search' name='search' placeholder='Search' aria-label='Search')
+      button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+.jumbotron.jumbotron-fluid(style='margin-bottom: 0px;')
+  .container-fluid
+    .mx-auto(style='width: 400px;')
+      h1.display-4(style='text-align: center;')= mov.Title
+br
+.container-fluid(style='margin-left:2%;')
+  .row
+    .movie-portal-view
+      #movie_poster.container-fluid
+        img.img(src=mov.Poster width='325' height='475')
+    .container(style='margin: unset;')
+      p-info Title:
+      p-info#Title.movie-title= mov.Title
+      br
+      br
+      p-info Release Date:
+      p-info#realease_date.date=mov.Released
+      br
+      br
+      p-info Runtime:
+      p-info#running_time.runtime= mov.Runtime
+      br
+      br
+      p-info Genre:
+      p-info#genre.genre= mov.Genre
+      br
+      br
+      p-info Director:
+      a#director.director-link(href='/people/'+mov.Director)= mov.Director
+      br
+      br
+      p-info Writers: 
+      p-info#director.writer='' + mov.Writer
+      br
+      br
+      p-info Rating:
+      p-info#rating.rating= mov.imdbRating
+      br
+      br
+      p-info Cast:
+      p-info.cast
+        a#cast_mates.actor-link(href='/people/' + mov.Actors)= mov.Actors
+        |
+    .col(style='margin-right: 10%;')
+      form(action="/movies/"+mov.Title+'/addReview/' method='GET')
+        .form-group
+          label(for='exampleFormControlTextarea1') Leave a Review
+          textarea#reviewBox.form-control(rows='3' name="review")
+          input(id="submitButton" onclick="addReview()" type='submit', value='Submit')
+    br
+    br
+    .container-md(style='margin:10px;')
+      p.p-heading Plot: 
+      p-info.plot=mov.Plot
+        |
+      br
+      br
+      br
+      p(style='font-size: 25px;') Reviews:
+      each r in review
+        p-info#reviewBox.reviews= r
+    .container(style='margin:10px')
+      br(style='margin-bottom: 25px;')
+      p.p-heading Similar Movies: 
+      .row
+        .col-lg-3
+          a(href='/movies/' + similar[n1].Title)
+            img.img(src=similar[n1].Poster width='250' height='310' style='margin-left:auto;margin-right:auto;')
+          p.feature-1(style='font-family:Lucida Sans Unicode;font-size:20px;text-align:center;')= similar[n1].Title
+        .col-lg-3
+          a(href='/movies/' + similar[n2].Title)
+            img.img(src=similar[n2].Poster width='250' height='310' style='margin-left:auto;margin-right:auto;')
+          p.feature-2(style='font-family:Lucida Sans Unicode;font-size:20px;text-align:center;')= similar[n2].Title
+        .col-lg-3
+          a(href='/movies/' + similar[n3].Title)
+            img.img(src=similar[n3].Poster width='250' height='310' style='margin-left:auto;margin-right:auto;')
+          p.feature-5(style='font-family:Lucida Sans Unicode;font-size:20px;text-align:center;')= similar[n3].Title

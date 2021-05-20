@@ -1,0 +1,43 @@
+head
+title TMS: Login
+meta(charset='utf-8')
+link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' integrity='sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z' crossorigin='anonymous')
+link(href='stylesheet.css' rel='stylesheet')
+script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js' integrity='sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+script(src='scripts.js' rel='script')
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  a.navbar-brand(href='#') TMS
+  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      li.nav-item
+        a.nav-link(href='/')
+          | Home 
+          span.sr-only (current)
+      li.nav-item
+        a.nav-link(href='/movies') Movies
+      li.nav-item
+        a.nav-link(href='/people')
+          | People
+      li.nav-item.active
+        a.nav-link(href='/user/'+'username') Login
+    form.form-inline.my-2.my-lg-0
+      input.form-control.mr-sm-2(type='search' placeholder='Search' aria-label='Search')
+      button.btn.btn-outline-success.my-2.my-sm-0(onclick='alertUser()' type='submit') Search
+.body
+    .jumbotron.jumbotron-fluid(style='margin-bottom: 0px;')
+    .container-fluid
+        .mx-auto(style='width: 400px;')
+         h1.display-4(style='text-align: center;') Login
+    .container
+    form(action="/user/loginUser" method='POST')
+        br
+        label(for='inputUsername') Username:
+        input#exampleInputEmail1.form-control(type='text' aria-describedby='emailHelp' name="username" placeholder='Username')
+        label(for='inputPassword') Password: 
+        input#exampleInputPassword1.form-control(type='password' name="password" placeholder='Password')
+        a.btn.btn-primary.btn-lg.active(action='./loginUser' method= 'POST' role='button' type="submit" aria-pressed='true') Login
+        a.btn.btn-primary.btn-lg.active(role='button' aria-pressed='true') Create Account

@@ -1,0 +1,62 @@
+head
+title TMS: Create Account
+meta(charset='utf-8')
+link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' integrity='sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z' crossorigin='anonymous')
+link(href='stylesheet.css' rel='stylesheet')
+script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js' integrity='sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+script(src='scripts.js' rel='script')
+script(src='movie-router.js' rel='script')
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  a.navbar-brand(href='#') TMS
+  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      li.nav-item
+        a.nav-link(href='/')
+          | Home 
+          span.sr-only (current)
+      li.nav-item.active
+        a.nav-link(href='/movies') Movies
+      li.nav-item
+        a.nav-link(href='/users')
+          | Account
+      li.nav-item
+        a.nav-link(href='/login') Login
+    form.form-inline.my-2.my-lg-0
+      input.form-control.mr-sm-2(type='search' placeholder='Search' aria-label='Search')
+      button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+.jumbotron.jumbotron-fluid(style='margin-bottom: 0px;')
+  .container-fluid
+    .mx-auto(style='width: 400px;')
+      h1.display-4(style='text-align: center;') Add Movie
+div
+  form
+    .form-group.row
+      label.col-sm-2.col-form-label(for='name') Title:
+      .col-sm-10
+        input#firstname_field.form-control(type='name' name="title" placeholder='Title')
+    .form-group.row
+      label.col-sm-2.col-form-label(for='name') Release Date: 
+      .col-sm-10
+        input#lastname_field.form-control(type='name' name="release_date" placeholder='Release Date ')
+    .form-group.row
+      label.col-sm-2.col-form-label(for='name') Director: 
+      .col-sm-10
+        input#username_field.form-control(type='name' name= 'director' placeholder='Director')
+    .form-group.row
+      label.col-sm-2.col-form-label(for='name') Rating: 
+      .col-sm-10
+        input#username_field.form-control(type='name' name='rating'  placeholder='Rating: ')
+    .form-group.row
+      label.col-sm-2.col-form-label(for='name') Cast: 
+      .col-sm-10
+        input#username_field.form-control(type='name' name='cast' placeholder='Cast: ')
+    .form-group.row
+      label.col-sm-2.col-form-label(for='name') Plot:  
+      .col-sm-10
+        input#username_field.form-control(type='name' placeholder='Plot: ')
+      .col-sm-10
+        button.btn.btn-primary(type='submit' name='add') Add

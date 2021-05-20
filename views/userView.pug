@@ -1,0 +1,85 @@
+head
+title TMS: Profile
+meta(charset='utf-8')
+link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' integrity='sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z' crossorigin='anonymous')
+link(href='stylesheet.css' rel='stylesheet')
+script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js' integrity='sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+script(src='scripts.js' rel='script')
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  a.navbar-brand(href='#') TMS
+  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      li.nav-item
+        a.nav-link(href='/')
+          | Home 
+          span.sr-only
+      li.nav-item
+        a.nav-link(href='/movies') Movies
+      li.nav-item
+        a.nav-link(href='/people') People
+      li.nav-item
+        a.nav-link(href='/user/logout') Logout
+    form.form-inline.my-2.my-lg-0
+      input.form-control.mr-sm-2(type='search' placeholder='Search' aria-label='Search')
+      button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+.jumbotron.jumbotron-fluid(style='margin-bottom: 0px;')
+  .container-fluid
+    .mx-auto(style='width: 400px;')
+      h1.display-4(style='text-align: center;') Account
+br
+.container-fluid(style='margin-left: 5%')
+  .row
+    .movie-portal-view
+      #profile_picture.container-fluid
+        img.img-fluid(src=temp.ProfilePic)
+    #user_info.container(style='margin: unset;')
+      p-info Username:
+      p-info.username=temp.Username
+      br
+      br
+      p-info Age:
+      p-info.age= temp.Age
+      br
+      br
+      p-info Location:
+      p-info.location=temp.Location
+      br
+      br
+      p-info Favourite Genres:
+      p-info.genre= temp.FavouriteGenre
+      br
+      br
+      p-info Posts:
+      p-info.posts= temp.Posts
+      br
+      br
+      p-info User Type: 
+      if temp.Type == 0
+        p-info Regular User
+      else
+        p-info Contributing User
+      button#notFollowed.button_notFollowed(onclick='follow()' value='Follow') Follow
+    .col
+      .card.text-white.bg-light.mb-3(style='max-width: 18rem; margin-left:-50%;')
+        .card-header(style='color: grey')= temp.Username
+        .card-body
+          p.card-text(style='color: grey') &quot;Lover of all movies!&quot;
+          br
+    .container(style='margin:10px;')
+      p.p-heading Favourite Movies: 
+      .row
+        .col-lg-3
+          img.img(src='https://m.media-amazon.com/images/M/MV5BZTk2ZmUwYmEtNTcwZS00YmMyLWFkYjMtNTRmZDA3YWExMjc2XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg' width='250' height='310' style='margin-left:auto;margin-right:auto;')
+          p.feature-1(style='font-family:Lucida Sans Unicode;font-size:20px;text-align:center;') Jumanji
+    .container(style='margin:10px')
+      p.p-heading Followers:
+      div
+        div(class='row')
+          .col-lg-3
+            img.img-fluid(src=temp.Followers[0].ProfilePic width='250' height='310' style='margin-left:auto;margin-right:auto;')
+            p.followers-1(style='font-family:Lucida Sans Unicode;font-size:20px;text-align:center;')=temp.Followers[0].Username
+      br

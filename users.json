@@ -1,0 +1,287 @@
+[
+    {
+            "Username":"Greg",
+            "Password":"1234",
+            "Age":"22",
+            "Location":"Canada",
+            "FavouriteGenre":"Thriller",
+            "LastOnline":0,
+            "Posts":0,
+            "ProfilePic":"",
+            "FavouriteMovies":[
+                {
+                    "Title":"",
+                    "Poster":""
+                }
+            ],
+            "Friends":[
+                {
+                    "Username":"Dave",
+                    "ProfilePic":""
+
+                }
+            ],
+            "Followers": [
+                {
+                    "Username":"Carleton",
+                    "ProfilePic":""
+                }
+            ],
+            "Following":[
+                {
+                    "Username":"",
+                    "ProfilePic":""
+                }
+            ],
+            "Type":0         
+        },
+    {
+            "Username":"Carleton",
+            "Password":"1234",
+            "Age":"23",
+            "Location":"Canada",
+            "FavouriteGenre":"Action, Spy, Thriller",
+            "LastOnline":12,
+            "Posts":1,
+            "ProfilePic":"",
+            "FavouriteMovies":[
+                {
+                    "Title":"Toy Story",
+                    "Poster":""
+                }
+            ],
+            "Friends":[
+                {
+                    "Username":"Dave",
+                    "ProfilePic":""
+
+                }
+            ],
+            "Followers": [
+                {
+                    "Username":"Dave",
+                    "ProfilePic":""
+                }
+            ],
+            "Following":[
+                {
+                    "Username":"Dave",
+                    "ProfilePic":""
+                }
+            ],
+            "Type":1         
+        },
+        {
+            "Username":"James_Bond123",
+            "Password":"1234",
+            "Age":"50",
+            "Location":"Canada",
+            "FavouriteGenre":"Comedy, Romance, Spy",
+            "LastOnline":12,
+            "Posts":1,
+            "ProfilePic":"",
+            "FavouriteMovies":[
+                {
+                    "Title":"Toy Story",
+                    "Poster":""
+                }
+            ],
+            "Friends":[
+                {
+                    "Username":"Dave",
+                    "ProfilePic":""
+
+                }
+            ],
+            "Followers": [
+                {
+                    "Username":"Dave",
+                    "ProfilePic":""
+                }
+            ],
+            "Following":[
+                {
+                    "Username":"Dave",
+                    "ProfilePic":""
+                }
+            ],
+            "Type":1         
+        },
+        {
+            "Username":"Dave",
+            "Password":"1234",
+            "Age":"28",
+            "Location":"Canada",
+            "FavouriteGenre":"Action, Spy, Thriller",
+            "LastOnline":12,
+            "Posts":1,
+            "ProfilePic":"https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5bb22ae84bbe6f67d2e82e05%2F0x0.jpg%3Fbackground%3D000000%26cropX1%3D560%26cropX2%3D1783%26cropY1%3D231%26cropY2%3D1455",
+            "FavouriteMovies":[
+                {
+                    "Title":"Spectre",
+                    "Poster":""
+                }
+            ],
+            "Friends":[
+                {
+                    "Username":"James_Bond123",
+                    "ProfilePic":"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/irish-actor-pierce-brosnan-as-james-bond-in-a-publicity-news-photo-138084872-1551742467.jpg?crop=1xw:1xh;center,top&resize=980:*"
+
+                }
+            ],
+            "Followers": [
+                {
+                    "Username":"James_Bond123",
+                    "ProfilePic":"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/irish-actor-pierce-brosnan-as-james-bond-in-a-publicity-news-photo-138084872-1551742467.jpg?crop=1xw:1xh;center,top&resize=980:*"
+                }
+            ],
+            "Following":[
+                {
+                    "Username":"James_Bond123",
+                    "ProfilePic":"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/irish-actor-pierce-brosnan-as-james-bond-in-a-publicity-news-photo-138084872-1551742467.jpg?crop=1xw:1xh;center,top&resize=980:*"
+                }
+            ],
+            "Type":1         
+        },
+        {
+            "Username":"greg_e456",
+            "Password":"1234",
+            "Age":"21",
+            "Location":"Canada",
+            "FavouriteGenre":"Action, Spy, Thriller, Documentary",
+            "LastOnline":12,
+            "Posts":1,
+            "ProfilePic":"",
+            "FavouriteMovies":[
+                {
+                    "Title":"Spectre",
+                    "Poster":""
+                }
+            ],
+            "Friends":[
+                {
+                    "Username":"Dave",
+                    "ProfilePic":""
+
+                }
+            ],
+            "Followers": [
+                {
+                    "Username":"Dave",
+                    "ProfilePic":""
+                }
+            ],
+            "Following":[
+                {
+                    "Username":"Dave",
+                    "ProfilePic":""
+                }
+            ],
+            "Type":1         
+        },
+        {
+            "Username":"Bruce_f123",
+            "Password":"1234",
+            "Age":"21",
+            "Location":"Canada",
+            "FavouriteGenre":"Action, Spy, Comedy, Adventure, Thriller",
+            "LastOnline":12,
+            "Posts":1,
+            "ProfilePic":"",
+            "FavouriteMovies":[
+                {
+                    "Title":"Jumanji",
+                    "Poster":""
+                }
+            ],
+            "Friends":[
+                {
+                    "Username":"Dave",
+                    "ProfilePic":""
+
+                },
+                {
+                    "Username": "greg_e456",
+                    "ProfilePic":""
+                }
+            ],
+            "Followers": [
+                {
+                    "Username":"Dave",
+                    "ProfilePic":""
+                },
+                {
+                    "Username": "greg_e456",
+                    "ProfilePic":""
+                }
+            ],
+            "Following":[
+                {
+                    "Username":"Dave",
+                    "ProfilePic":""
+                },
+                {
+                    "Username": "greg_e456",
+                    "ProfilePic":""
+                }
+            ],
+            "Type":1         
+        },
+        {
+            "Username":"no_root123",
+            "Password":"1234",
+            "Age":"21",
+            "Location":"Canada",
+            "FavouriteGenre":"Action, Spy, Comedy, Adventure, Thriller",
+            "LastOnline":12,
+            "Posts":1,
+            "ProfilePic":"",
+            "FavouriteMovies":[
+                {
+                    "Title":"Jumanji",
+                    "Poster":""
+                }
+            ],
+            "Friends":[
+                {
+                    "Username":"Dave",
+                    "ProfilePic":""
+
+                },
+                {
+                    "Username": "greg_e456",
+                    "ProfilePic":""
+                }
+            ],
+            "Followers": [
+                {
+                    "Username":"Dave",
+                    "ProfilePic":""
+                },
+                {
+                    "Username": "greg_e456",
+                    "ProfilePic":""
+                }
+            ],
+            "Following":[
+                {
+                    "Username":"Dave",
+                    "ProfilePic":""
+                },
+                {
+                    "Username": "greg_e456",
+                    "ProfilePic":""
+                }
+            ],
+            "Type":0         
+        }
+
+
+
+
+
+
+        
+
+]
+

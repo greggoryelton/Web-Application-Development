@@ -1,0 +1,80 @@
+
+head
+title The Movie Sight
+meta(charset='utf-8')
+link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' integrity='sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z' crossorigin='anonymous')
+link(href='stylesheet.css' rel='stylesheet')
+script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js' integrity='sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+script(src='scripts.js' rel='script')
+script(src='search.js' rel='script')
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  a.navbar-brand(href='#') TMS
+  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      li.nav-item
+        a.nav-link(href='/')
+          | Home 
+          span.sr-only (current)
+      li.nav-item.active
+        a.nav-link(href='/movies') Movies
+      li.nav-item
+        a.nav-link(href='/user')
+          | Account
+      li.nav-item
+        a.nav-link(href='/login') Login
+    form.form-inline.my-2.my-lg-0
+      input.form-control.mr-sm-2(type='search' placeholder='Search' name="search" aria-label='Search')
+      button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+.jumbotron.jumbotron-fluid(style='margin-bottom: 0px;')
+  .container-fluid
+    img.img(src='https://www.pinclipart.com/picdir/big/108-1081968_item-detail-3d-glasses-itembrowser-itembrowser-movie-3d.png' width='250' height='200' style='margin-left: 25%; margin-bottom: -7%;')
+    .mx-auto(style='width: 400px;')
+      h1.display-4 The Movie Sight
+      p.lead(style='text-align:center;') Set Your Sights on the Right Movie!
+.body(style='background-color: rgb(77, 76, 76);' onload = "init()")
+  .container(style='text-align:center;')
+    p.p-heading(style='font-size:20px;color:rgb(204,204,204);') Today's Featured Movies:
+    .row
+      .col-lg-4
+        a(href='/movies/'+ t1)
+          img.img(src=p1 width='250' height='310' style='margin-left:auto;margin-right:auto;')
+        p.feature-1(style='font-family:Lucida Sans Unicode;font-size:20px;text-align:center; color: rgb(204, 204, 204);')=t1
+      .col-lg-4
+        a(href='/movies/'+ t2)
+          img.img(src=p2 width='250' height='310' style='margin-left:auto;margin-right:auto;')
+        p.feature-2(style='font-family:Lucida Sans Unicode;font-size:20px;text-align:center; color: rgb(204, 204, 204);')=t2
+      .col-lg-4
+        a(href='/movies/'+ t3)
+          img.img(src=p3 width='250' height='310' style='margin-left:auto;margin-right:auto;')
+        p.feature-3(style='font-family:Lucida Sans Unicode;font-size:20px;text-align:center; color: rgb(204, 204, 204);')=t3
+      .col-lg-4
+        a(href='/movies/'+ t4)
+          img.img(src=p4 width='250' height='310' style='margin-left:auto;margin-right:auto;')
+        p.feature-4(style='font-family:Lucida Sans Unicode;font-size:20px;text-align:center; color: rgb(204, 204, 204);')=t4
+      .col-lg-4
+        a(href='/movies/'+ t5)
+          img.img(src=p5 width='250' height='310' style='margin-left:auto;margin-right:auto;')
+        p.feature-5(style='font-family:Lucida Sans Unicode;font-size:20px;text-align:center; color: rgb(204, 204, 204);')=t5
+      .col-lg-4
+        a(href='/movies/'+ t6)
+          img.img(src=p6 width='250' height='310' style='margin-left:auto;margin-right:auto;')
+        p.feature-5(style='font-family:Lucida Sans Unicode;font-size:20px;text-align:center; color: rgb(204, 204, 204);')=t6
+    .row
+      .col-lg-4
+        a(href='/movies/'+ t7)
+          img.img(src=p7 width='250' height='310' style='margin-left:auto;margin-right:auto;')
+        p.feature-6(style='font-family:Lucida Sans Unicode;font-size:20px;text-align:center; color: rgb(204, 204, 204);')=t7
+      .col-lg-4
+        a(href='/movies/'+ t8)
+          img.img(src=p8 width='250' height='310' style='margin-left:auto;margin-right:auto;')
+        p.feature-7(style='font-family:Lucida Sans Unicode;font-size:20px;text-align:center; color: rgb(204, 204, 204);')=t8
+      .col-lg-4
+        a(href='/movies/'+ t9)
+          img.img(src=p9 width='250' height='310' style='margin-left:auto;margin-right:auto;')
+        p.feature-8(style='font-family:Lucida Sans Unicode;font-size:20px;text-align:center; color: rgb(204, 204, 204);')=t9
+ 
+    
